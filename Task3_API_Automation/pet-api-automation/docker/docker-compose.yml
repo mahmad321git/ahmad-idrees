@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  petstore:
+    image: swaggerapi/petstore:latest
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v2/swagger.json"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  tests:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      petstore:
+        condition: service_healthy
+    environment:
+      - BASE_URL=http://petstore:8080/v2
