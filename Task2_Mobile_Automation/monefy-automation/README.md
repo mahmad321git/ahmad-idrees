@@ -1,8 +1,6 @@
 # Monefy App Automation Suite
 
 
-## 2. Mobile App Test Automation
-
 ### Selected E2E User Flows
 
 Based on the exploratory session, the three critical flows chosen are:
