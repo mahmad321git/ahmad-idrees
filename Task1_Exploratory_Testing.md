@@ -1,6 +1,6 @@
 # Monefy Testing Deliverables
 
-This document outlines the exploratory testing session, mobile app test automation, and RESTful API test automation solutions for the Monefy application. It details the testing charters, findings, prioritization, risks, as well as the automated testing frameworks and their setup.
+This document outlines the exploratory testing session that I did for the Monefy application. It details the testing charters, findings, prioritization, risks
 
 ---
 
@@ -23,15 +23,11 @@ For this session, I chose the Android platform. The goal was to assess key funct
    - **Objective:** Ensure that personalization options work as expected.
    - **Focus Areas:** Changing currency, theme, language; persistence of settings after app restart.
 
-4. **Reports & Analytics**
-   - **Objective:** Test the generation of financial reports and charts.
-   - **Focus Areas:** Accuracy of data summaries, responsiveness of charts, correct filtering by date range.
-
-5. **Backup & Restore**
+4. **Backup & Restore**
    - **Objective:** Verify that backup and restoration features protect user data.
    - **Focus Areas:** Successful backup creation, clarity of the restore process, handling of duplicate data.
 
-6. **Category Management**
+5. **Category Management**
    - **Objective:** Verify the creation, editing and deletion of categories.
    - **Focus Areas:** Successful creation, editing and dleting of categories to ensure persistence
    and UI Consistency
@@ -52,8 +48,6 @@ For this session, I chose the Android platform. The goal was to assess key funct
   - Currency changes were applied but not uniformly reflected in all UI areas.
   - Theme changes worked, though the update had a slight delay on some devices.
 
-- **Reports & Analytics**
-  - Generated reports accurately summarized data; however, chart loading was occasionally slow.
   
 - **Backup & Restore**
   - Backup creation was successful; however, the restoration process lacked clear guidance and resulted in some duplicated data entries.
@@ -72,9 +66,6 @@ For this session, I chose the Android platform. The goal was to assess key funct
    - **Priority:** Medium  
    - **Reason:** While important for personalization, issues here have less impact on the core financial operations.
    
-4. **Reports & Analytics:**  
-   - **Priority:** Medium  
-   - **Reason:** Performance delays in report generation affect usability but do not compromise data accuracy.
    
 5. **Initial App Launch & Navigation:**  
    - **Priority:** Low  
@@ -99,18 +90,3 @@ For this session, I chose the Android platform. The goal was to assess key funct
   - *Mitigation:* Optimize backend processing and consider caching strategies for frequently generated reports.
 
 ---
-
-## 2. Mobile App Test Automation
-
-### Selected E2E User Flows
-
-Based on the exploratory session, the three critical flows chosen are:
-
-1. **Transaction Entry Flow (Income/Expense)**
-   - Adding, editing, and deleting transactions.
-
-2. **Backup & Restore Flow**
-   - Creating a backup and restoring data.
-
-3. **Report Generation Flow**
-   - Generating monthly reports and verifying the accuracy of displayed data.
