@@ -1,6 +1,6 @@
 # Monefy Testing Deliverables
 
-This document outlines the exploratory testing session that I did for the Monefy application. It details the testing charters, findings, prioritization, risks
+This document outlines the exploratory testing session that I did for the Monefy application. It details the testing charters, findings, prioritization, risk & mitigation strategies
 
 ---
 
