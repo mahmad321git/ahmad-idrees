@@ -12,4 +12,22 @@ public class DashboardPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(incomeButton)).click();
         return new TransactionPage(driver);
     }
+    public String getTotalBalance() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(totalBalance)).getText();
+    }
+
+    public String getIncomeBalance() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(incomeAmount)).getText();
+    }
+
+    public String getExpenseBalance() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(expenseAmount)).getText();
+    }
+
+    public DashboardPage resetTransactions() {
+        // Implementation to reset transactions between tests
+        return this;
+    }
+
+
 }
