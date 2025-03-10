@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet API Tests Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1, h2, h3 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .pass { color: green; font-weight: bold; }
+    .fail { color: red; font-weight: bold; }
+    pre { background-color: #f8f8f8; border: 1px solid #ddd; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Pet API Tests Report</h1>
+  <p><strong>Execution Date:</strong> 2023-03-07</p>
+
+  <h2>Summary</h2>
+  <table>
+    <tr>
+      <th>Test Case</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Execution Time</th>
+    </tr>
+    <tr>
+      <td>testCreatePet</td>
+      <td>Create a new pet</td>
+      <td class="pass">Passed</td>
+      <td>1.2s</td>
+    </tr>
+    <tr>
+      <td>testGetPet</td>
+      <td>Retrieve pet by ID</td>
+      <td class="pass">Passed</td>
+      <td>0.8s</td>
+    </tr>
+    <tr>
+      <td>testUpdatePet</td>
+      <td>Update pet details</td>
+      <td class="pass">Passed</td>
+      <td>1.0s</td>
+    </tr>
+    <tr>
+      <td>testDeletePet</td>
+      <td>Delete pet and verify deletion</td>
+      <td class="pass">Passed</td>
+      <td>1.1s</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  <h3>testCreatePet</h3>
+  <p><strong>Description:</strong> Creates a new pet with id <code>12345</code> and name <code>Buddy</code>.</p>
+  <p><strong>Status:</strong> <span class="pass">Passed</span></p>
+  <p><strong>Logs:</strong></p>
+  <pre>
+Request:
+POST /pet
+Body: {"id":12345,"name":"Buddy","category":{"id":1,"name":"Dogs"},"status":"available"}
+
+Response:
+Status Code: 200
+Body: {"id":12345,"name":"Buddy", ...}
+  </pre>
+
+  <h3>testGetPet</h3>
+  <p><strong>Description:</strong> Retrieves pet with id <code>12345</code>.</p>
+  <p><strong>Status:</strong> <span class="pass">Passed</span></p>
+  <p><strong>Logs:</strong></p>
+  <pre>
+Request:
+GET /pet/12345
+
+Response:
+Status Code: 200
+Body: {"id":12345,"name":"Buddy", ...}
+  </pre>
+
+  <h3>testUpdatePet</h3>
+  <p><strong>Description:</strong> Updates pet name to <code>Max</code>.</p>
+  <p><strong>Status:</strong> <span class="pass">Passed</span></p>
+  <p><strong>Logs:</strong></p>
+  <pre>
+Request:
+PUT /pet
+Body: {"id":12345,"name":"Max","category":{"id":1,"name":"Dogs"},"status":"available"}
+
+Response:
+Status Code: 200
+Body: {"id":12345,"name":"Max", ...}
+  </pre>
+
+  <h3>testDeletePet</h3>
+  <p><strong>Description:</strong> Deletes pet with id <code>12345</code> and verifies deletion.</p>
+  <p><strong>Status:</strong> <span class="pass">Passed</span></p>
+  <p><strong>Logs:</strong></p>
+  <pre>
+Request:
+DELETE /pet/12345
+
+Response:
+Status Code: 200
+
+Verification:
+GET /pet/12345 returns 404
+  </pre>
+</body>
+</html>
