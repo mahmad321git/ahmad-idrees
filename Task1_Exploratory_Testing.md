@@ -29,7 +29,7 @@ For this session, I chose the Android platform. The goal was to assess key funct
 
 5. **Category Management**
    - **Objective:** Verify the creation, editing and deletion of categories.
-   - **Focus Areas:** Successful creation, editing and dleting of categories to ensure persistence
+   - **Focus Areas:** Successful creation, editing and deleting of categories to ensure persistence
    and UI Consistency
 
 ### Findings from Exploratory Testing
@@ -84,9 +84,5 @@ For this session, I chose the Android platform. The goal was to assess key funct
 - **Data Loss Risk:**  
   - *Risk:* Inadequate backup/restore processes might result in data loss or duplication.  
   - *Mitigation:* Improve user guidance during backup/restore and perform integration tests for data consistency.
-
-- **Performance Risk:**  
-  - *Risk:* Slow report generation could hinder the user experience.  
-  - *Mitigation:* Optimize backend processing and consider caching strategies for frequently generated reports.
 
 ---
