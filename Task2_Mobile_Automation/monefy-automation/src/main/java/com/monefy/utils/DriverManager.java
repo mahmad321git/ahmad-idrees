@@ -13,7 +13,7 @@ public class DriverManager {
         caps.setCapability("platformName", "Android");
         caps.setCapability("appium:automationName", "UiAutomator2");
         caps.setCapability("appium:app", Config.APP_PATH);
-        // Add other capabilities
+       
         
         driver.set(new AndroidDriver(Config.APPIUM_SERVER_URL, caps));
     }
