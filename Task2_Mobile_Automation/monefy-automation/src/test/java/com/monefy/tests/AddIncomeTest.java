@@ -1,4 +1,12 @@
-// AddIncomeTest.java
+package com.monefy.tests;
+
+import com.monefy.pages.DashboardPage;
+import com.monefy.utils.DriverManager;
+import io.appium.java_client.AppiumDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 public class AddIncomeTest {
     private AppiumDriver driver;
     
@@ -21,5 +29,10 @@ public class AddIncomeTest {
 
         String actualBalance = new DashboardPage(driver).getBalance();
         Assert.assertEquals(actualBalance, amount, "Balance mismatch after income addition");
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        DriverManager.resetApp();
     }
 }
