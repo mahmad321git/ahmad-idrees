@@ -2,6 +2,6 @@
     "platformName": "Android",
     "appium:deviceName": "Pixel 6",
     "appium:automationName": "UiAutomator2",
-    "appium:app": "/path/to/monefy.apk",
+    "appium:app": "apps/monefy.apk", 
     "appium:autoGrantPermissions": true
   }
