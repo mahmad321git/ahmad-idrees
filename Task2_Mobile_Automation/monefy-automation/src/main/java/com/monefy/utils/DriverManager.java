@@ -1,3 +1,5 @@
+package utils;
+
 public class DriverManager {
     private static final ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
     
