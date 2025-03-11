@@ -5,12 +5,13 @@
 
 
 ## Is the Solution easy to Maintain & Scale?
+Yes, I have choose the framework in such a way that it will help to maintain & scale the project needs dynamically, I will explain it further how:
 
 ### Easy to Maintain
 - **Modular Structure:**  
   Each CRUD operation is encapsulated in separate test methods within a dedicated test class. This separation makes it easy to locate, update, or extend tests without impacting unrelated areas.
 - **Centralized Configuration:**  
-  Common settings, such as the base URI and content type, are defined in a centralized `@BeforeClass` setup method. This reduces duplication and simplifies configuration updates.
+  Common settings, such as the base URI and content type, are defined in a centralized `@BeforeClass` , `@afterClass` annotations, this reduces duplication and simplifies configuration updates.
 - **Maven Dependency Management:**  
   Using Maven allows for straightforward management and upgrading of dependencies. With version control in the `pom.xml`, the project remains consistent and up-to-date.
 
