@@ -1,3 +1,5 @@
+package pages;
+
 public class BasePage {
     protected AppiumDriver driver;
     protected final WebDriverWait wait;
