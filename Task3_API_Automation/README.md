@@ -2,7 +2,7 @@
 
 ## Features
 - CRUD operations for Pet endpoints
-- Surefire test reporting
+- Allure test reporting
 - Dockerized execution
 - Environment configuration
 
@@ -11,7 +11,7 @@
 |-----------------|------------------|----------------------------------|
 | API Testing     | RestAssured      | Declarative API testing          |
 | Test Runner     | JUnit 5          | Modern annotations/parallel exec |
-| Reporting       | SureFire         | Rich HTML reports                |
+| Reporting       | Allure           | Rich HTML reports                |
 | Build Tool      | Maven            | Dependency management            |
 | Containerization| Docker           | Environment consistency          |
 
