@@ -1,4 +1,3 @@
-This repository contains my submission for the Senior Quality Engineer take-home challenge.
 
 ## Tasks
 1. **[Task 1: Exploratory Testing Report](Task1_Exploratory_Testing.md)**  
